@@ -1,0 +1,150 @@
+# Tech Vision Agent - Complete Requirements File
+# ==============================================
+# Single file containing ALL project dependencies
+# Install with: pip install -r requirements.txt
+
+# SYSTEM REQUIREMENTS
+# ===================
+# Python: 3.8+
+# Node.js: 18.0+ (install separately with: npm install)
+# npm: 8.0+ (comes with Node.js)
+
+# ============================================
+# CORE BACKEND DEPENDENCIES (REQUIRED)
+# ============================================
+
+# FastAPI Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# HTTP Client & Environment Management
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Google Cloud Services (for Patents API)
+google-cloud-bigquery==3.13.0
+google-auth==2.23.4
+
+# ============================================
+# DEVELOPMENT & TESTING TOOLS (OPTIONAL)
+# ============================================
+
+# Testing Framework
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2
+
+# Code Quality & Formatting
+black==23.9.1
+flake8==6.1.0
+isort==5.12.0
+mypy==1.6.1
+
+# Development Tools
+pre-commit==3.5.0
+python-semantic-release==8.3.0
+
+# API Testing & Mocking
+requests-mock==1.11.0
+responses==0.23.3
+
+# Documentation Generation
+mkdocs==1.5.3
+mkdocs-material==9.4.6
+
+# Performance & Monitoring
+memory-profiler==0.61.0
+py-spy==0.3.14
+
+# Security Tools
+bandit==1.7.5
+safety==2.3.5
+
+# ============================================
+# DEMO & UTILITY DEPENDENCIES
+# ============================================
+
+# Enhanced CLI Output (for demo.py)
+colorama==0.4.6
+rich==13.6.0
+
+# ============================================
+# INSTALLATION INSTRUCTIONS
+# ============================================
+
+# STEP 1: Install Python Dependencies
+# ------------------------------------
+# pip install -r requirements.txt
+
+# STEP 2: Install Node.js Dependencies
+# ------------------------------------
+# npm install
+# 
+# The following Node.js packages will be installed via package.json:
+# - react@18.2.0 (Frontend framework)
+# - vite@5.0.0 (Build tool)
+# - tailwindcss@3.4.6 (CSS framework)
+# - axios@1.8.4 (HTTP client)
+# - react-router-dom@6.0.2 (Routing)
+# - lucide-react@0.484.0 (Icons)
+# - framer-motion@10.16.4 (Animations)
+# - recharts@2.15.2 (Charts)
+# - d3@7.9.0 (Data visualization)
+# - @reduxjs/toolkit@2.6.1 (State management)
+# - And 40+ other frontend dependencies
+
+# STEP 3: Environment Configuration
+# ---------------------------------
+# Backend (.env):
+# NEWSAPI_KEY=your_key_here
+# HUGGINGFACE_API_KEY=your_key_here
+# GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+# 
+# Frontend (.env.local):
+# VITE_API_URL=http://localhost:8000
+
+# STEP 4: Start Services
+# ----------------------
+# Backend: python backend/app.py
+# Frontend: npm run start
+
+# ============================================
+# MINIMAL INSTALLATION (PRODUCTION ONLY)
+# ============================================
+# If you only want core functionality, install these:
+# fastapi==0.104.1
+# uvicorn[standard]==0.24.0
+# requests==2.31.0
+# python-dotenv==1.0.0
+# pydantic==2.5.0
+# python-multipart==0.0.6
+
+# ============================================
+# API SERVICES INFORMATION
+# ============================================
+# The application integrates with these APIs:
+# 1. Semantic Scholar API (Free - no key required)
+# 2. NewsAPI (Free tier - API key required)
+# 3. Hugging Face API (Free tier - API key required)  
+# 4. Google Patents API (Google Cloud - credentials required)
+
+# ============================================
+# TROUBLESHOOTING
+# ============================================
+# If installation fails:
+# 1. Update pip: pip install --upgrade pip
+# 2. Use no-cache: pip install --no-cache-dir -r requirements.txt
+# 3. For M1 Mac: pip install --upgrade pip setuptools wheel
+# 4. Check Python version: python --version (requires 3.8+)
+
+# ============================================
+# VERIFICATION
+# ============================================
+# After installation, verify with:
+# python check_requirements.py
+# 
+# Or test manually:
+# python -c "import fastapi, uvicorn, requests; print('✅ Core dependencies installed')"
